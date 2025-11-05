@@ -77,7 +77,7 @@ def get_statistics(index: int):
         'total_entropy': entropy(count_arr),
         'known_entropy': entropy(count_arr[0:4]),
         'percent_composition': { k:(v / sum(count_arr)) for (k,v) in counts.items() },
-        'known_percent_composition': { k:(v / sum(count_arr)) for (k,v) in known_counts.items() },
+        'known_percent_composition': { k:(v / sum(count_arr[0:4])) for (k,v) in known_counts.items() },
     }
 
 def main(): 
