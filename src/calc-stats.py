@@ -8,6 +8,8 @@ from json import dumps
 from os import makedirs
 from sys import argv
 
+from util import fetch_chromosome
+
 # CONFIGURATION 
 MULTIPROCESS_ENABLED = True
 PROCESS_COUNT = 22
@@ -23,12 +25,6 @@ BASE_COUNTS_OBJ = {
     'A': 0, 'G': 0, 'C': 0, 'T': 0, 'N': 0,
 }
 
-
-def fetch_chromosome(index: int): 
-    '''Fetch raw chromosome data by index.'''
-    with open(DATA_PATH.replace('%', str(index)), 'r') as file:
-        data = ''.join([ line.strip() for line in file.readlines()[1:] ])
-    return data
 
 def count_sequence(data: str):
     '''Counts the number of occurences of each nucleotide in a sequence.'''
