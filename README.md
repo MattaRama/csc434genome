@@ -5,8 +5,8 @@
 This is a project I built for CSC434: AI & Machine Learning at SUNY Brockport.
 In the specifications for the project, we are supposed to choose two chromosomes to
 perform our analysis and search on. However, I decided that it would not be much
-more difficult to perform my analysis and search on all 22 files provided by
-[this ucsc repository](https://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/).
+more difficult to perform my analysis and search on chromosomes 1-22 provided by
+[this UCSC repository](https://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/).
 
 In order to make that possible, some optimizations had to be made. If running this
 project, it is recommended that you have at least 8GB of free RAM and a somewhat
@@ -34,7 +34,7 @@ and stored for analysis and searching.
     - Percentage Composition (of each nucleotide and unknown/N)
     - Known Percentage Composition (of each nucleotide)
 
-### 2. Motif Search Algorithm
+### 2. Motif Search Algorithm (not yet started)
 - Proposing and implementing a search algorithm to identify occurrences of a short
 DNA pattern (motif) in a chromosome sequence.
 
@@ -67,8 +67,9 @@ be executed as such:
 ```
 python src/fetch-data.py
 ```
-This will download and decompress the chromosome data from the UCSC repository.
-Note that this requires that you have at least 2.75GB of available disk space.
+This will download and decompress the chromosome data from the UCSC repository
+into the `data/raw/` directory. Note that this requires that you have at least
+2.75GB of available disk space.
 
 Once you have downloaded the data, you can calculate the entropy and statistics
 for each chromosome using:
