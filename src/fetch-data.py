@@ -26,7 +26,8 @@ if exists(RAW_DATA_PATH):
         exit(0)
     else:
         rmtree(RAW_DATA_PATH)
-        makedirs(RAW_DATA_PATH)
+
+makedirs(RAW_DATA_PATH, exist_ok=True)
 
 
 for i in range(len(DOWNLOAD_URLS)):
