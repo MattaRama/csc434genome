@@ -62,10 +62,10 @@ DNA pattern (motif) in a chromosome sequence.
 
 ## Usage
 
-The chromosome data can be fetched using the `fetch-data.py` script, which should
+The chromosome data can be fetched using the `fetch_data.py` script, which should
 be executed as such:
 ```
-python src/fetch-data.py
+python src/fetch_data.py
 ```
 This will download and decompress the chromosome data from the UCSC repository
 into the `data/raw/` directory. Note that this requires that you have at least
@@ -74,7 +74,7 @@ into the `data/raw/` directory. Note that this requires that you have at least
 Once you have downloaded the data, you can calculate the entropy and statistics
 for each chromosome using:
 ```
-python src/calc-stats.py
+python src/calc_stats.py
 ```
 Due to the fact that synchronously calculating all 22 chromosomes would take a
 somewhat significant amount of time, the script uses Python's multiprocessing 
@@ -82,7 +82,7 @@ module in order to run multiple analysis tasks at once. If you are on a lower-po
 computer, you may choose to disable this feature and compute synchronously by
 switching the `MULTIPROCESS_ENABLED` constant to `False`. You may also reduce the
 CPU/RAM requirements of multiprocessing by reducing the `PROCESS_COUNT`, which
-will limit the amount of tasks that `calc-stats.py` attempts to run at once.
+will limit the amount of tasks that `calc_stats.py` attempts to run at once.
 
 The results of this analysis are both outputted to the console as well as to 
 `out/statistics.json`, where you can review them or use them in another script for
