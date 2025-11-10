@@ -87,3 +87,15 @@ will limit the amount of tasks that `calc-stats.py` attempts to run at once.
 The results of this analysis are both outputted to the console as well as to 
 `out/statistics.json`, where you can review them or use them in another script for
 further analysis.
+
+For searching for a particular motif, we use the same multiprocessing strategy in
+order to decrease the time required to perform such a large search. This project
+uses a simple naive search algorithm in order to search through each chromosome for
+a particular motif specified in `naive_search.py` as `MOTIF`. To run the search,
+use:
+
+```
+python src/naive_search.py
+```
+
+The results of the search are placed in the `out/search_results.json` file. 
