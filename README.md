@@ -34,7 +34,7 @@ and stored for analysis and searching.
     - Percentage Composition (of each nucleotide and unknown/N)
     - Known Percentage Composition (of each nucleotide)
 
-### 2. Motif Search Algorithm (not yet started)
+### 3. Motif Search Algorithm
 - Proposing and implementing a search algorithm to identify occurrences of a short
 DNA pattern (motif) in a chromosome sequence.
 
